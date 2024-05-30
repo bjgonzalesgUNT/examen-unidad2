@@ -7,6 +7,6 @@
 
 ## INIT PROJECT
 
-1. Execute `npm run docker:start:`
+1. Execute `npm run docker:start`
 2. Execute `npm run dev`
 3. Execute `php artisan serve`

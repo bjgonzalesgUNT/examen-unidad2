@@ -1,7 +1,7 @@
 @extends("layouts.app")
 
 @section("title")
-    servicio {{ $name }}
+    nosotros
 @endsection
 
 @section("content")

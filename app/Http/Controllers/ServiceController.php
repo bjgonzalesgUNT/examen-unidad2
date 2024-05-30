@@ -7,22 +7,17 @@ use Illuminate\View\View;
 
 class ServiceController extends Controller
 {
-    public function index(Request $request): View
-    {
-        $request->validate([
-            'name' => 'string|regex:/^[A-Za-z]+$/u'
-        ]);
-
-        $name = $request->get('name');
-
-        return view("services.index", ['name' => $name]);
-    }
-
-    public function view(string $name)
+    public function index(): View
     {
 
-        return (ctype_upper($name) || ctype_lower($name))
-            ? view("services.view", ["name" => $name])
-            : redirect()->route("services.index");
+        $services = [
+            ['title' => 'Servicio 1'],
+            ['title' => 'Servicio 2'],
+            ['title' => 'Servicio 3'],
+            ['title' => 'Servicio 4'],
+            ['title' => 'Servicio 5'],
+        ];
+
+        return view("service", ['services' => $services]);
     }
 }

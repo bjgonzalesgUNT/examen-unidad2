@@ -1,3 +1,7 @@
+<?php
+$pageTitle = "xd";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,7 +12,7 @@
     </head>
 
     <body class="flex min-h-screen w-full flex-col">
-        @livewire("header")
+        <livewire:header />
 
         <main class="flex-1">
             <div class="w-full">

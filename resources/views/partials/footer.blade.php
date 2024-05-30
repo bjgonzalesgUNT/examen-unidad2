@@ -7,6 +7,8 @@
                 class="size-6"
             />
         </a>
-        <span class="text-lg font-bold uppercase text-white">empresa</span>
+        <span class="text-lg font-bold uppercase text-white">
+            {{ "codigo laravel" }}
+        </span>
     </div>
 </footer>

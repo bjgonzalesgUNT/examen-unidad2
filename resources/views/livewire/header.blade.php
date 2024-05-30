@@ -10,9 +10,8 @@
             />
             <div class="text-white">
                 <span class="text-xl font-black uppercase md:text-2xl">
-                    {{ "Empresa" }}
+                    {{ "codigo laravel" }}
                 </span>
-                <span class="lowercase md:font-normal">{{ ".com" }}</span>
             </div>
         </a>
         <div class="flex items-center md:hidden">
@@ -37,19 +36,11 @@
             
         @endcomponent
 
-        @component("components.navbar-item", ["title" => "proyectos", "ref" => "projects.index"])
+        @component("components.navbar-item", ["title" => "contacto", "ref" => "contacts.index"])
             
         @endcomponent
 
-        @component("components.navbar-item", ["title" => "clientes", "ref" => "clients.index"])
-            
-        @endcomponent
-
-        @component("components.navbar-item", ["title" => "blog", "ref" => "blogs.index"])
-            
-        @endcomponent
-
-        @component("components.navbar-item", ["title" => "contacto", "ref" => "contact.index"])
+        @component("components.navbar-item", ["title" => "nosotros", "ref" => "about.index"])
             
         @endcomponent
     </div>

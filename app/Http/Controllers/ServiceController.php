@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -10,14 +11,29 @@ class ServiceController extends Controller
     public function index(): View
     {
 
-        $services = [
-            ['title' => 'Servicio 1'],
-            ['title' => 'Servicio 2'],
-            ['title' => 'Servicio 3'],
-            ['title' => 'Servicio 4'],
-            ['title' => 'Servicio 5'],
-        ];
+        $services = Service::all();
 
-        return view("service", ['services' => $services]);
+        return view("services.index", ['services' => $services]);
+    }
+
+    public function create(): View
+    {
+        return view('services.create');
+    }
+
+    public function store(Request $request)
+    {
+
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+
+        Service::create([
+            'title' => $request->title,
+            'description' => $request->description
+        ]);
+
+        return redirect()->route('services.index')->with('success', '');
     }
 }

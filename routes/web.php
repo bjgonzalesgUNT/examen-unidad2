@@ -24,6 +24,8 @@ Route::get('/home', HomeController::class)->name('home.index');
 
 //* SERVICES
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
+Route::get('/services/create', [ServiceController::class, 'create'])->name('services.create');
+Route::post('/services', [ServiceController::class, 'store'])->name('services.store');
 
 //* CONTACT
 Route::get('/contact', ContactController::class)->name('contacts.index');

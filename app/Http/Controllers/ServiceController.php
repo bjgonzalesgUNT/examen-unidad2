@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ServiceRequest;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -21,18 +22,15 @@ class ServiceController extends Controller
         return view('services.create');
     }
 
-    public function store(Request $request)
+    public function store(ServiceRequest $request)
     {
 
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-        ]);
+        // $request->validate([
+        //     'title' => 'required',
+        //     'description' => 'required',
+        // ]);
 
-        Service::create([
-            'title' => $request->title,
-            'description' => $request->description
-        ]);
+        Service::create($request->validated());
 
         return redirect()->route('services.index')->with('success', '');
     }

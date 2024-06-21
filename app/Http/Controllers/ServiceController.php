@@ -19,7 +19,7 @@ class ServiceController extends Controller
 
     public function create(): View
     {
-        return view('services.create');
+        return view('services.create', ['service' => new Service()]);
     }
 
     public function store(ServiceRequest $request)
@@ -32,6 +32,28 @@ class ServiceController extends Controller
 
         Service::create($request->validated());
 
+        return redirect()->route('services.index')->with('success', '');
+    }
+
+    public function show(Service $service)
+    {
+        return view('services.show', ['service' => $service]);
+    }
+
+    public function edit(Service $service): View
+    {
+        return view('services.edit', ['service' => $service]);
+    }
+
+    public function update(ServiceRequest $request, Service $service)
+    {
+        $service->update($request->validated());
+        return redirect()->route('services.index')->with('success', '');
+    }
+
+    public function destroy(Service $service)
+    {
+        $service->delete();
         return redirect()->route('services.index')->with('success', '');
     }
 }

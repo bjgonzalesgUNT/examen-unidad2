@@ -9,6 +9,7 @@ $pageTitle = 'xd';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto - @yield('title')</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     @vite('resources/css/app.css')
 </head>
 
@@ -21,9 +22,9 @@ $pageTitle = 'xd';
                 @yield('title')
             </h1>
         </div>
-        <div class="w-full mt-4">
+        <main class="w-full px-4 my-2">
             @yield('content')
-        </div>
+        </main>
     </main>
 
     @include('partials.footer')

@@ -26,7 +26,7 @@ Route::get('/home', HomeController::class)->name('home.index');
 Route::resource("/services", ServiceController::class);
 
 //* CONTACT
-Route::get('/contact', ContactController::class)->name('contacts.index');
+Route::resource('/contacts', ContactController::class);
 
 //* ABOUT
 Route::resource('/about', AboutController::class)->only(['index']);

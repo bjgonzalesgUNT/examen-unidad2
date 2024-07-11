@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
 @section('title')
-    Ver calificaciones de {{ $studentCourses[0]->student->name }}
+    Ver calificaciones de {{ $student->name }}
 @endsection
-
 
 @section('content')
     <div class="w-full flex justify-center">

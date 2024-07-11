@@ -41,7 +41,8 @@ class QualificationController extends Controller
 
     public function show($id)
     {
+        $student = Student::find($id);
         $studentCourses = StudentCourses::where('student_id', $id)->get();
-        return view('qualifications.show', compact('studentCourses'));
+        return view('qualifications.show', compact('student', 'studentCourses'));
     }
 }

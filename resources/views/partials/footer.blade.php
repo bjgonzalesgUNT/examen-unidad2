@@ -2,13 +2,13 @@
     <div class="flex items-center gap-1">
         <a class="" href="/">
             <img
-                src="{{ asset("/icons/home.svg") }}"
+                src="{{ asset("/icons/exam.svg") }}"
                 alt="home_icon"
                 class="size-6"
             />
         </a>
         <span class="text-lg font-bold uppercase text-white">
-            {{ "codigo laravel" }}
+            {{ "EXAMEN U2" }}
         </span>
     </div>
 </footer>

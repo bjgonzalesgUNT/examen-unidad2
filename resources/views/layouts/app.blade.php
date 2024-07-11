@@ -18,7 +18,7 @@ $pageTitle = 'xd';
 
     <main class="flex-1">
         <div class="w-full">
-            <h1 class="bg-indigo-500 p-3 text-center text-3xl font-extrabold uppercase">
+            <h1 class="bg-indigo-500 text-white p-3 text-center text-3xl font-extrabold uppercase">
                 @yield('title')
             </h1>
         </div>

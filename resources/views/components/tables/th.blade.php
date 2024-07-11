@@ -1,0 +1,1 @@
+<th class="uppercase font-semibold px-3 py-1.5 text-center bg-blue-800 text-white">{{ $value }}</th>

@@ -9,9 +9,9 @@
         <table class="table-fixed table">
             <thead>
                 <tr>
-                    <th class="uppercase font-semibold px-3 py-1.5 text-center bg-blue-800 text-white">ID</th>
-                    <th class="uppercase font-semibold px-3 py-1.5 text-center bg-blue-800 text-white">Estudiante</th>
-                    <th class="uppercase font-semibold px-3 py-1.5 text-center bg-blue-800 text-white">opciones</th>
+                    <x-tables.th value="id" />
+                    <x-tables.th value="estudiante" />
+                    <x-tables.th value="opciones" />
                 </tr>
             </thead>
             <tbody>
@@ -20,8 +20,7 @@
                         <td class="px-3 py-1.5 text-center">{{ $student->id }}</td>
                         <td class="px-3 py-1.5 text-center">{{ $student->name }}</td>
                         <td class="px-3 py-1.5 text-center">
-                            <a href="{{ route('qualifications.show', $student->id) }}"
-                                class="underline text-sky-800">
+                            <a href="{{ route('qualifications.show', $student->id) }}" class="underline text-sky-800">
                                 Ver calificacion
                             </a>
                     </tr>

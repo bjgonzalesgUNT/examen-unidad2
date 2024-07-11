@@ -5,13 +5,13 @@
 1. Execute `npm install`
 2. Execute `composer install`
 
-## INIT PROJECT
-
-1. Execute `npm run docker:start`
-2. Execute `npm run dev`
-3. Execute `php artisan serve`
-
 ## DATABASE
 
+1. Execute `npm run docker:start`
 1. Execute `php artisan migrate`
 2. Execute `php artisan db:seed`
+
+## INIT PROJECT
+
+1. Execute `npm run dev`
+2. Execute `php artisan serve`

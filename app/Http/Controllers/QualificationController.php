@@ -16,7 +16,7 @@ class QualificationController extends Controller
 
     public function index()
     {
-        $students = Student::all();
+        $students = Student::paginate(5);
         return view('qualifications.index', compact('students'));
     }
 
@@ -35,14 +35,14 @@ class QualificationController extends Controller
             'unit_1' => $request->unit_1,
             'unit_2' => $request->unit_2
         ]);
-        
+
         return redirect()->route('qualifications.index');
     }
 
     public function show($id)
     {
         $student = Student::find($id);
-        $studentCourses = StudentCourses::where('student_id', $id)->get();
+        $studentCourses = StudentCourses::where('student_id', $id)->paginate(5);
         return view('qualifications.show', compact('student', 'studentCourses'));
     }
 }

@@ -19,8 +19,12 @@ class StudentsSeeder extends Seeder
             ['name' => 'Ricardo Quispe'],
             ['name' => 'Marco Rebaza'],
             ['name' => 'Jorge Paredes'],
+            ['name' => 'Julian Alvarez'],
+            ['name' => 'Carlos Perez'],
+            ['name' => 'Luisa Mendoza'],
+            ['name' => 'Maria Rodriguez'],
+            ['name' => 'Sofia Gutierrez'],
+            ['name' => 'Jose Gutierrez'],
         ]);
-
     }
-
 }

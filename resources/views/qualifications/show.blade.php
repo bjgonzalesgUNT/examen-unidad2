@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="w-full flex justify-center">
+    <div class="w-full flex flex-col items-center justify-center">
         <table class="table table-fixed w-full lg:w-3/4">
             <thead>
                 <tr>
@@ -46,5 +46,8 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="mt-4">
+            {{ $studentCourses->links() }}
+        </div>
     </div>
 @endsection
